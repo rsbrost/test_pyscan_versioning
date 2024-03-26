@@ -222,6 +222,8 @@ class OxfordIPS120(InstrumentDriver):
             return False
         elif status.H==1:
             return True
+        elif status.H==5:
+            pass # need to have an error mode, heater is on and can be turned off, but it is not on for sweeping
         else:
             # magnet persistant
             return False
